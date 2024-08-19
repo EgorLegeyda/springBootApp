@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.person-info {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.person-info p {
+    margin: 0;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.books-section {
+    margin-bottom: 20px;
+}
+
+.no-books {
+    text-align: center;
+    color: #999;
+}
+
+.books-list h2 {
+    margin-bottom: 10px;
+}
+
+.books-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.books-list td {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}

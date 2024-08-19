@@ -1,0 +1,50 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Edit</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form th:method="PATCH" th:action="@{/people/{id}(id=${person.getPersonId()})}" th:object="${person}">-->
+
+<!--    <label for="name">Enter name</label>-->
+<!--    <input type="text" th:field="*{name}" id="name"/>-->
+<!--    <br/>-->
+<!--    <label for="birthYear">Enter birth year</label>-->
+<!--    <input type="text" th:field="*{birthYear}" id="birthYear">-->
+
+<!--    <br/>-->
+<!--    <hr/>-->
+<!--    <input type="submit"/>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+    <link rel="stylesheet" th:href="@{/css/people/edit.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Edit Person</h1>
+    <form th:method="PATCH" th:action="@{/people/{id}(id=${person.getPersonId()})}" th:object="${person}">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" th:field="*{name}" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="birthYear">Birth Year</label>
+            <input type="text" class="form-control" th:field="*{birthYear}" id="birthYear" required>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="/people" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+

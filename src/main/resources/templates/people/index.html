@@ -1,0 +1,39 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Index</title>-->
+<!--    <link rel="stylesheet" th:href="@{/css/people/index.css}">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div th:each="person : ${people}">-->
+<!--    <a th:href="@{/people/{id}(id=${person.getPersonId()})}"-->
+<!--       th:text="${person.getPersonId() + ', ' + person.getName() + ', ' + person.getBirthYear()}"></a>-->
+<!--</div>-->
+<!--<br>-->
+<!--<hr/>-->
+
+<!--<a href="/people/new">Create new user</a>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" th:href="@{/css/people/index.css}">
+</head>
+<body>
+<div class="container">
+    <div class="person-link" th:each="person : ${people}">
+        <a th:href="@{/people/{id}(id=${person.getPersonId()})}"
+           th:text="${person.getPersonId() + ', ' + person.getName() + ', ' + person.getBirthYear()}"></a>
+    </div>
+    <div class="create-button-container">
+        <a class="create-button" href="/people/new">Create new user</a>
+    </div>
+</div>
+</body>
+</html>
